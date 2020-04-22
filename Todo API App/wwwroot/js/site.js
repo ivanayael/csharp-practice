@@ -99,11 +99,15 @@ function _displayItems(data) {
 
     let editButton = button.cloneNode(false);
     editButton.innerText = 'Edit';
+    editButton.classList.add('text-center','btn', 'btn-warning', 'btn-sm', 'btn-block');
     editButton.setAttribute('onclick', `displayEditForm(${item.id})`);
+
 
     let deleteButton = button.cloneNode(false);
     deleteButton.innerText = 'Delete';
+    deleteButton.classList.add('btn', 'btn-danger', 'btn-sm', 'btn-block');
     deleteButton.setAttribute('onclick', `deleteItem(${item.id})`);
+  
 
     let tr = tBody.insertRow();
     
